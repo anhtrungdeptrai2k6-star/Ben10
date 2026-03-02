@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Rajdhani:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --theme-color: #39FF14;
+  --theme-glow: rgba(57, 255, 20, 0.5);
+  --theme-glow-strong: rgba(57, 255, 20, 0.8);
+  --theme-scanline: rgba(57, 255, 20, 0.05);
+}
+
+@theme {
+  --color-ben-green: var(--theme-color);
+  --color-ben-black: #0A0A0A;
+  --color-ben-gray: #2A2A2A;
+  --font-orbitron: "Orbitron", sans-serif;
+  --font-rajdhani: "Rajdhani", sans-serif;
+}
+
+body {
+  background-color: var(--color-ben-black);
+  color: var(--color-ben-green);
+  font-family: var(--font-rajdhani);
+}
+
+.font-orbitron {
+  font-family: var(--font-orbitron);
+}
+
+.scanline {
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(255, 255, 255, 0) 50%,
+    var(--theme-scanline) 50%,
+    var(--theme-scanline)
+  );
+  background-size: 100% 4px;
+}
+
+.omnitrix-glow {
+  box-shadow: 0 0 15px var(--theme-glow);
+}
+
+.omnitrix-glow:focus-within {
+  box-shadow: 0 0 25px var(--theme-glow-strong);
+}
+
